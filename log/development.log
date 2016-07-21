@@ -5,3 +5,588 @@ Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127
 Processing by Rails::WelcomeController#index as HTML
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (8.3ms)
 Completed 200 OK in 64ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (10.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (10.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to DeviseCreateUsers (20160721184856)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar, "last_sign_in_ip" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.5ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160721184856"]]
+  [1m[36m (13.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_reset_password_token' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_email' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_email' AND type='index'
+
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 18:55:59 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/railties-4.2.5/lib/rails/templates/rails/welcome/index.html.erb (8.5ms)
+Completed 200 OK in 66ms (Views: 40.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 18:58:59 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (8.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (113.4ms)
+Completed 200 OK in 780ms (Views: 732.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 190.101.17.133 at 2016-07-21 18:59:00 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for 190.101.17.133 at 2016-07-21 18:59:00 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for 190.101.17.133 at 2016-07-21 18:59:00 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 190.101.17.133 at 2016-07-21 18:59:00 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 190.101.17.133 at 2016-07-21 18:59:01 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/users/sign_in" for 190.101.17.133 at 2016-07-21 18:59:14 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wmjRo0bYHS1xflRzvOyarHumv9k9hrF08rYBVDmtPW4rCNtSiCSSKdZcnHG8WJQUVCu9lJuEzwX66EpBIkgJ/w==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms)
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wmjRo0bYHS1xflRzvOyarHumv9k9hrF08rYBVDmtPW4rCNtSiCSSKdZcnHG8WJQUVCu9lJuEzwX66EpBIkgJ/w==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (6.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 94ms (Views: 91.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 190.101.17.133 at 2016-07-21 19:01:32 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (12.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (35.3ms)
+Completed 200 OK in 89ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 19:13:02 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 455ms (Views: 453.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/page.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 190.101.17.133 at 2016-07-21 19:13:03 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/page.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 190.101.17.133 at 2016-07-21 19:13:03 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 19:20:24 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 36ms (Views: 35.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 190.101.17.133 at 2016-07-21 19:20:31 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3hFoXR/Ko3Y059CafRIfr7dsx0wBpgJKx9C/Q4qGJWM3cWKs0TYscpPFGJh9phEXmOHFAaekfDvPjvRWkWMR8g=="}
+Redirected to https://bocs3-vicente170.c9users.io/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 19:20:31 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 39ms (Views: 37.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 19:20:41 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (11.6ms)
+Completed 200 OK in 61ms (Views: 46.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/sign_up" for 190.101.17.133 at 2016-07-21 19:20:42 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 110ms (Views: 105.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 19:20:45 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 48ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 190.101.17.133 at 2016-07-21 19:20:46 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/users/sign_out" for 190.101.17.133 at 2016-07-21 19:21:18 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"TOnvbWGWhDNA8HGrEDi2VN9pTwe7T3cMQT+yMf6g04mlieWcr2oLN+fSuakQjLjs8ORNSh1NCX1JYfkk5UXnGA=="}
+Redirected to https://bocs3-vicente170.c9users.io/
+Filter chain halted as :verify_signed_out_user rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 19:21:18 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 190.101.17.133 at 2016-07-21 19:21:38 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 35ms (Views: 33.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 190.101.17.133 at 2016-07-21 19:22:21 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"shOpV4nbVLMNd2v2DntO0h9DxPf3fUmV7ufV0UQXpipbc6OmRyfbt6pVo/QOz0BqMM7GulF/N+TmuZ7EX/KSuw==", "user"=>{"email"=>"viperalta@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users" WHERE "users"."email" = 'viperalta@gmail.com' LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["email", "viperalta@gmail.com"], ["encrypted_password", "$2a$11$K6VwzPeGvsiHuvHXOl2kxuBPKi47Bz4ikXcGu81P0qfzbBhZEhSyq"], ["created_at", "2016-07-21 19:22:21.517237"], ["updated_at", "2016-07-21 19:22:21.517237"]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "last_sign_in_ip" = ?, "current_sign_in_ip" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["last_sign_in_at", "2016-07-21 19:22:21.532050"], ["current_sign_in_at", "2016-07-21 19:22:21.532050"], ["last_sign_in_ip", "190.101.17.133"], ["current_sign_in_ip", "190.101.17.133"], ["sign_in_count", 1], ["updated_at", "2016-07-21 19:22:21.533723"], ["id", 1]]
+  [1m[35m (9.7ms)[0m  commit transaction
+Redirected to https://bocs3-vicente170.c9users.io/
+Completed 302 Found in 298ms (ActiveRecord: 22.1ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 19:22:21 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 35.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 19:26:58 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `user_signed?' for #<#<Class:0x007f19062953d0>:0x007f1900992a30>
+Did you mean?  user_signed_in?):
+     8: </head>
+     9: <body>
+    10:   
+    11:   <% if user_signed? %>
+    12:   
+    13:     <%= link_to "Ingresa a tu cuenta", new_user_session_path %><br>
+    14:     <%= link_to "REGISTRATE", new_user_registration_path %><br>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3800385519996697473_69872680351780'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (103.3ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 19:27:41 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `user_signedin?' for #<#<Class:0x007f19062953d0>:0x007f1906786268>
+Did you mean?  user_signed_in?):
+     8: </head>
+     9: <body>
+    10:   
+    11:   <% if user_signedin? %>
+    12:   
+    13:     <%= link_to "Ingresa a tu cuenta", new_user_session_path %><br>
+    14:     <%= link_to "REGISTRATE", new_user_registration_path %><br>
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3800385519996697473_69872729748500'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.5ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 19:28:50 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 76ms (Views: 74.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 19:28:58 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Redirected to https://bocs3-vicente170.c9users.io/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 4ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 19:28:58 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 33ms (Views: 32.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 19:29:36 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 140ms (Views: 137.7ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/sign_out" for 190.101.17.133 at 2016-07-21 19:29:37 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"hfSEyOQeOg6jt/HBBZScvsFaFPmu4l160o677HfihnNslI45KuK1CgSVOcMFIJIG7tcWtAjgIwva0PD5bAey4g=="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://bocs3-vicente170.c9users.io/
+Completed 302 Found in 19ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 19:29:38 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 19:29:40 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (4.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (15.3ms)
+Completed 200 OK in 47ms (Views: 45.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 190.101.17.133 at 2016-07-21 19:29:48 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dCAC3v5tK2xNzi1IXj/hcnzEVSsw2pEw7lvWwMqmbtY4Z0SDZX1F7m7dUHVMi9wLTML9uJuPVY309R1kPSpOEQ==", "user"=>{"email"=>"viperalta@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "viperalta@gmail.com"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["current_sign_in_at", "2016-07-21 19:29:48.408480"], ["sign_in_count", 2], ["updated_at", "2016-07-21 19:29:48.410027"], ["id", 1]]
+  [1m[36m (11.3ms)[0m  [1mcommit transaction[0m
+Redirected to https://bocs3-vicente170.c9users.io/
+Completed 302 Found in 199ms (ActiveRecord: 12.2ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 19:29:48 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 190.101.17.133 at 2016-07-21 19:30:23 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"lWFfrRZGLEmAkLKWHeVutf+1iC7rGw2s9QQ8tcRkK/uxGh39gI97fe0QmkJYsmq1/2UB0reNUHryhHPx0GhttA=="}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to https://bocs3-vicente170.c9users.io/
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 19:30:23 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 36ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 21:32:28 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (22.8ms)
+Completed 200 OK in 85ms (Views: 83.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 190.101.17.133 at 2016-07-21 21:32:30 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 48ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 190.101.17.133 at 2016-07-21 21:36:39 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (12.0ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/page/home" for 190.101.17.133 at 2016-07-21 21:36:43 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 32ms (Views: 31.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/page/about" for 190.101.17.133 at 2016-07-21 21:36:44 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#about as HTML
+  Rendered page/about.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 34ms (Views: 33.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/page/contact" for 190.101.17.133 at 2016-07-21 21:36:45 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#contact as HTML
+  Rendered page/contact.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 21:36:47 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (7.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (20.7ms)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 190.101.17.133 at 2016-07-21 21:36:55 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (3.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 63ms (Views: 61.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 21:36:56 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (5.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 131ms (Views: 128.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/page/about" for 190.101.17.133 at 2016-07-21 21:45:10 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#about as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 21:45:10 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 63ms (Views: 47.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/page/contact" for 190.101.17.133 at 2016-07-21 21:45:11 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#contact as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 21:45:11 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/page/about" for 190.101.17.133 at 2016-07-21 21:45:13 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#about as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 21:45:13 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/page/home" for 190.101.17.133 at 2016-07-21 21:45:14 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 34ms (Views: 33.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/page/contact" for 190.101.17.133 at 2016-07-21 21:45:17 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#contact as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 21:45:17 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (4.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/page/contact" for 190.101.17.133 at 2016-07-21 22:03:39 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PageController#contact as HTML
+Completed 401 Unauthorized in 38ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 22:03:39 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (19.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (123.8ms)
+Completed 200 OK in 696ms (Views: 674.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 22:03:46 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (20.2ms)
+Completed 200 OK in 76ms (Views: 74.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 190.101.17.133 at 2016-07-21 22:04:30 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m852YJmzDJfQQIO64fh68H1gSA0W81dnWxJnnec++fBVrv7JASGkqbGceZfQiLZ9hLzHgx9QDX6q/GQNCIZuqA==", "user"=>{"email"=>"viperalta@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."email" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["email", "viperalta@gmail.com"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  UPDATE "users" SET "last_sign_in_at" = ?, "current_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?  [["last_sign_in_at", "2016-07-21 19:29:48.408480"], ["current_sign_in_at", "2016-07-21 22:04:30.789135"], ["sign_in_count", 3], ["updated_at", "2016-07-21 22:04:30.793877"], ["id", 1]]
+  [1m[36m (15.7ms)[0m  [1mcommit transaction[0m
+Redirected to https://bocs3-vicente170.c9users.io/page/contact
+Completed 302 Found in 375ms (ActiveRecord: 17.2ms)
+
+
+Started GET "/page/contact" for 190.101.17.133 at 2016-07-21 22:04:31 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#contact as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered page/contact.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 172ms (Views: 167.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/page/contact" for 190.101.17.133 at 2016-07-21 22:04:39 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#contact as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+  Rendered page/contact.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 79ms (Views: 70.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/page/about" for 190.101.17.133 at 2016-07-21 22:04:40 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#about as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  Rendered page/about.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 37ms (Views: 35.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/page/home" for 190.101.17.133 at 2016-07-21 22:04:41 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 190.101.17.133 at 2016-07-21 22:04:44 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"AqbZ59FQLTQOxXOuKq/F9PSYChsbFOXahjB88kXn84iUz5r7Gz3Y8yvhSCEnZmFspZZ2uAZyjis56iBFbPxI4g=="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to https://bocs3-vicente170.c9users.io/
+Completed 302 Found in 21ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-21 22:04:46 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 37ms (Views: 36.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/page/contact" for 190.101.17.133 at 2016-07-21 22:05:44 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#contact as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-21 22:05:44 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (5.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 54ms (Views: 52.6ms | ActiveRecord: 0.0ms)

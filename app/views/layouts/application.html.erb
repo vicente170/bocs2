@@ -7,7 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  
+  <% if user_signed_in? %>
+  
+    <%= link_to "Salir de mi cuenta", destroy_user_session_path, method: :delete %><br>
+  
+  <% else %>
+    <%= link_to "Ingresa a tu cuenta", new_user_session_path %><br>
+    <%= link_to "REGISTRATE", new_user_registration_path %><br>
+    
+  <% end %>
+    <%= link_to "Inicio", page_home_path %><br>
+    <%= link_to "Sobre Bocs", page_about_path %><br>
+    <%= link_to "Contacto", page_contact_path %><br>
+    
+  <% if user_signed_in? %>
+    <div>Bienvenido a Bocs, <%= current_user.email %></div>
+  <% end %>
+  
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 <%= yield %>
 
 </body>
