@@ -2,37 +2,14 @@
 <html>
   <head>
     <title>Bocs, Aplicación Chilena de Reclamos</title>
-    <%= csrf_meta_tags %>
-    <%= stylesheet_link_tag    'application', media: 'all',
-                                              'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
-      </script>
-    <![endif]-->
+    <%= render 'layouts/railsdefault' %>
+    <%= render 'layouts/shim' %>
   </head>
   <body>
-    <header class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
-        <%= link_to "bocs app", page_home_path, id: "logo" %>
-        <nav>
-          <ul class="nav navbar-nav navbar-right">
-             <% if user_signed_in? %>
-               <li><%= link_to "Sobre Bocs", page_about_path %></li>
-               <li><%= link_to "Contacto", page_contact_path %></li>
-               <li><%= link_to "Salir de mi cuenta", destroy_user_session_path, method: :delete %></li>
-             <% else %>
-                <li><%= link_to "CREA UNA CUENTA", new_user_registration_path %></li>
-                <li><%= link_to "Sobre Bocs", page_about_path %></li>
-                <li><%= link_to "Contacto", page_contact_path %></li>
-                <li><%= link_to "Ingresa a tu cuenta", new_user_session_path %></li>
-              <% end %>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    <%= render 'layouts/header' %>
     <div class="container">
       <%= yield %>
+      <%= render 'layouts/footer' %>
     </div>
   </body>
 </html>
