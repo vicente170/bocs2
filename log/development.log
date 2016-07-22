@@ -716,3 +716,137 @@ Processing by Devise::SessionsController#new as HTML
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (7.0ms)
   Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (16.3ms)
 Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-22 18:26:55 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `full_title' for #<#<Class:0x00000001f465e0>:0x00000001f05978>):
+    1: <!DOCTYPE html>
+    2: <html>
+    3:   <head>
+    4:     <title><%= full_title(yield(:title)) %></title>
+    5:     <%= csrf_meta_tags %>
+    6:     <%= stylesheet_link_tag    'application', media: 'all',
+    7:                                               'data-turbolinks-track': 'reload' %>
+  app/views/layouts/application.html.erb:4:in `_app_views_layouts_application_html_erb__513666029131105320_13748580'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (100.3ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-22 18:27:39 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 301ms (Views: 300.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-22 18:27:42 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 22ms (Views: 21.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-22 18:27:50 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (12.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (217.7ms)
+Completed 200 OK in 267ms (Views: 246.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/page/about" for 190.101.17.133 at 2016-07-22 18:27:52 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#about as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-22 18:27:52 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (3.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 43ms (Views: 42.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-22 18:31:52 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 523ms (Views: 497.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-22 18:32:08 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 80ms (Views: 79.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-22 18:39:44 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 494ms (Views: 476.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-22 18:39:52 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (11.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (149.7ms)
+Completed 200 OK in 212ms (Views: 186.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/sign_up" for 190.101.17.133 at 2016-07-22 18:40:03 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (6.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/registrations/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 75ms (Views: 73.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/page/about" for 190.101.17.133 at 2016-07-22 18:40:24 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#about as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-22 18:40:24 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (11.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (23.0ms)
+Completed 200 OK in 63ms (Views: 61.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/page/about" for 190.101.17.133 at 2016-07-22 18:40:26 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#about as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 190.101.17.133 at 2016-07-22 18:40:26 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/shared/_links.html.erb (9.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/devise-4.2.0/app/views/devise/sessions/new.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 83ms (Views: 80.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 190.101.17.133 at 2016-07-22 18:40:32 +0000
+Cannot render console from 190.101.17.133! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PageController#home as HTML
+  Rendered page/home.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 199ms (Views: 198.3ms | ActiveRecord: 0.0ms)
