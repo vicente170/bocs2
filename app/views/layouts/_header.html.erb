@@ -6,6 +6,7 @@
              <% if user_signed_in? %>
                <li><%= link_to "Sobre Bocs", page_about_path %></li>
                <li><%= link_to "Contacto", page_contact_path %></li>
+               <li><%= link_to "Bienvenido," , edit_user_registration_path %></li>
                <li><%= link_to "Salir de mi cuenta", destroy_user_session_path, method: :delete %></li>
              <% else %>
                 <li><%= link_to "CREA UNA CUENTA", new_user_registration_path %></li>
