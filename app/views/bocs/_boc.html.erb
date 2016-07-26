@@ -1,0 +1,8 @@
+<li id="boc-<%= micropost.id %>">
+  <%= link_to gravatar_for(boc.user, size: 50), boc.user %>
+  <span class="user"><%= link_to boc.user.name, boc.user %></span>
+  <span class="content"><%= boc.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(boc.created_at) %> ago.
+  </span>
+</li>
