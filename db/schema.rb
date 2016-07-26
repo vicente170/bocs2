@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722211534) do
+ActiveRecord::Schema.define(version: 20160726201537) do
+
+  create_table "bocs", force: :cascade do |t|
+    t.text     "content"
+    t.string   "company"
+    t.integer  "price"
+    t.date     "enddate"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "bocs", ["user_id", "created_at"], name: "index_bocs_on_user_id_and_created_at"
+  add_index "bocs", ["user_id"], name: "index_bocs_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
