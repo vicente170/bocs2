@@ -1,0 +1,34 @@
+<% if user_signed_in? %>
+<div class="center jumbotron">
+  <h1>Bienvenido a BOCS</h1>
+
+  <h2>
+    En esta página podrás ingresar BOCS, que serán resueltos por nuestros Bocsers!</h2> 
+    <h2>Actualmente estás conectado con tu mail:</h2>
+  <p><%= current_user.email %></p><%= link_to 'Editar Usuario', edit_user_registration_path(current_user) %>
+  
+  <h4><p class="notice"><%= notice %></p></h4>
+  <h3><p class="alert"><%= alert %></p></h3>
+  
+  
+
+
+<% else %>
+<div class="center jumbotron">
+  <h1>Bienvenido a BOCS</h1>
+
+  <h2>
+    En esta página podrás ingresar BOCS, que serán resueltos por nuestros Bocsers!
+  </h2>
+  
+
+  <%= link_to "REGISTRATE AHORA!", new_user_registration_path, class: "btn btn-lg btn-primary" %>
+  
+  <%= link_to "o INGRESA A TU CUENTA", new_user_session_path, class: "btn btn-lg btn-secondary" %>
+  
+  <h4><p class="notice"><%= notice %></p></h4>
+  <h3><p class="alert"><%= alert %></p></h3>
+  
+</div>
+
+<% end %>
